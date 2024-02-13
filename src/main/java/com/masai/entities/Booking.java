@@ -6,7 +6,7 @@ import java.time.LocalDateTime;
 
 import lombok.Data;
 
-//Entity class representing a booking in the car rental application.
+//Entity class representing a booking in the application.
 @Data
 public class Booking implements Serializable{
 

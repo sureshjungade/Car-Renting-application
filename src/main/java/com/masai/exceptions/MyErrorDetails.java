@@ -6,7 +6,7 @@ import lombok.AllArgsConstructor;
 import lombok.Getter;
 import lombok.NoArgsConstructor;
 import lombok.Setter;
-
+//Custom error details class to encapsulate error information.
 @Getter
 @Setter
 @AllArgsConstructor

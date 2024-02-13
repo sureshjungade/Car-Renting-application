@@ -21,6 +21,7 @@ public class UserService {
 	
 	private final String filePath = "User.ser";
 	
+	// Saves the user data to a file and returns a success message upon successful registration.
 	public String save(User user) {
 		File file = new File(filePath);
         if (!file.exists()) {
@@ -40,7 +41,7 @@ public class UserService {
     }
 	
 	
-	
+	// Retrieves a list of all users from the file.
 	public List<User> get()  {
 		List<User> users = new ArrayList<>();
         try (ObjectInputStream inputStream = new ObjectInputStream(new FileInputStream(filePath))) {
@@ -58,6 +59,7 @@ public class UserService {
         return users;
     }
 	
+	// Validates user credentials by comparing them with stored user data, and returns a success message upon successful login.
 	public String login(User userModel) {
         List<User> users = get();
         for (User user : users) {
